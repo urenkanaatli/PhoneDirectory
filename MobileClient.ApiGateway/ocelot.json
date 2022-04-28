@@ -1,0 +1,47 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/DirectoryService",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/directoryservice",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "DownstreamPathTemplate": "/api/DirectoryService/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/directoryservice/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamScheme": "http"
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReportService",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/reportservice",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "UpstreamScheme": "http"
+    }
+
+  ]
+}
+
+//https://localhost:7256/directory-service
+//https://localhost:7039/api/DirectoryService?PageIndex=1&PageCount=10
